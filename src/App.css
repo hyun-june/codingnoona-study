@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1em;
 }
 
 .wrapper {
@@ -26,6 +27,19 @@
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   height: 100%;
+}
+
+button {
+  background-color: beige;
+  padding: 1em;
+  border: 1px solid mintcream;
+  min-width: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  scale: 1.2;
 }
 
 .number {

@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="container">
       <h1>count:{count}</h1>
-      <button onClick={increase}>increase</button>
+      <button onClick={increase}>증가</button>
+      <button onClick={decrease}>감소</button>
       <button onClick={() => increaseBy(10)}>10씩 증가</button>
-      <button onClick={decrease}>decrease</button>
       <button onClick={() => decreaseBy(10)}>10씩 감소</button>
       <button onClick={() => reset()}>초기화</button>
 
