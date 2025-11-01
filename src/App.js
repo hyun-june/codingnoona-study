@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import counterStore from "./stores/counterStore";
+import numberStore from "./stores/numberStore";
 
 function App() {
+  const { count, increase, decrease, increaseBy, decreaseBy, reset } =
+    counterStore();
+  const { num, text, numSelect, numReset, textSelect, prevNum } = numberStore();
+  const numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const textList = ["+", "-", "x", "÷", "="];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>count:{count}</h1>
+      <button onClick={increase}>increase</button>
+      <button onClick={() => increaseBy(10)}>10씩 증가</button>
+      <button onClick={decrease}>decrease</button>
+      <button onClick={() => decreaseBy(10)}>10씩 감소</button>
+      <button onClick={() => reset()}>초기화</button>
+
+      {/* <div className="wrapper">
+        <div className="result">{num}</div>
+        <div className="button_wrapper">
+          <div className="number">
+            {[...numberList].reverse().map((item, i) => (
+              <button key={i} onClick={() => numSelect(item)}>
+                {item}
+              </button>
+            ))}
+          </div>
+          <div className="result_btn">
+            <button onClick={() => numReset()}>지우기</button>
+            {textList.map((item, i) => (
+              <button key={i} onClick={() => textSelect(item)}>
+                {item}
+              </button>
+            ))}
+          </div>
+        </div> 
+      </div>*/}
     </div>
   );
 }
