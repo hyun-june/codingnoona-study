@@ -1,0 +1,113 @@
+.chatting_container {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  min-height: 100dvh;
+
+  .start_message {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+
+    span {
+      padding-bottom: 0.2em;
+      border-bottom: 2px solid black;
+      width: max-content;
+    }
+  }
+}
+
+.message_section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1em;
+  overflow: auto;
+  .message_box {
+    display: flex;
+    max-width: 50%;
+  }
+
+  .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .message {
+    padding: 8px;
+    border-radius: 12px;
+    max-width: 80%;
+    margin: 2px 8px;
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+  }
+
+  .message-content {
+    margin: 0;
+    font-family: inherit;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+.message.user {
+  background-color: rgb(189, 181, 211);
+}
+
+.message.other {
+  background-color: white;
+}
+
+.message_box.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message_box.other {
+  align-self: flex-start;
+}
+
+.send_message {
+  padding: 0em 1em;
+  display: flex;
+  align-items: center;
+
+  textarea {
+    resize: none;
+    border: 2px solid #a6c9eb;
+    background-color: white;
+    width: 100%;
+    padding-top: 0.6em;
+    height: 2em;
+    border-radius: 8px;
+    padding-left: 3em;
+    font-size: 1.2em;
+    line-height: 1.8em;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    left: 1.5em;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: inherit;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}

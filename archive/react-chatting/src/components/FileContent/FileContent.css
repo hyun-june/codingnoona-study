@@ -1,0 +1,10 @@
+.file_content {
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
