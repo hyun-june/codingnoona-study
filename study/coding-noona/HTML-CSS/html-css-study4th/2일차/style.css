@@ -1,0 +1,66 @@
+/* 과제1 Box CSS */
+.box {
+  width: 200px;
+  background-color: #fff;
+  border: 50px solid transparent;
+  border-image: linear-gradient(red 0%, orange 100%);
+  border-image-slice: 1;
+  margin: 20px;
+  padding: 50px;
+}
+
+.box-section {
+  display: flex;
+}
+
+.green {
+  border-image: linear-gradient(#d0d0ff 0%, #9999c7 100%);
+  border-image-slice: 1;
+}
+
+.blue {
+  border-image: linear-gradient(#f5ffb9 0%, #f3ff21 100%);
+  border-image-slice: 1;
+}
+
+/* 과제2 CSS */
+.challenge2 {
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+  padding-left: 12%;
+}
+
+h1 {
+  color: #9b59b6;
+}
+
+h1::before {
+  content: "Topic: ";
+}
+
+h1:first-child {
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Verdana";
+  font-style: italic;
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: #2980b9;
+}
+
+.sub-header {
+  color: #9b59b6;
+}

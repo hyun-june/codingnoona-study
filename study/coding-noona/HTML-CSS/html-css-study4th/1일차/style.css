@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background-color: #f9e8ee;
+  height: 100%;
+  display: flex;
+
+  & button {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}
+
+.mobile_container {
+  width: 428px;
+  height: 761px;
+  border-radius: 30px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px #ddd;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.mobile_container::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3em;
+  min-height: 40px;
+}
+
+.nav_input {
+  display: flex;
+  align-items: center;
+
+  & input {
+    height: 30px;
+    border-radius: 12px;
+    padding-left: 1em;
+    border: 1px solid #333333;
+    display: none;
+  }
+
+  & input:focus {
+    border: none;
+    outline: 2px solid #333333;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0 0 0;
+
+  & img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  & h1 {
+    margin: 16px 0;
+  }
+}
+
+#info-btn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 20px;
+}
+
+#info-icon {
+  font-size: 0.8em;
+}
+
+table {
+  width: 100%;
+  display: none;
+  tr {
+    height: 33.5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  th {
+    background-color: #1b1a20;
+    color: white;
+    width: 25%;
+    border: 1px solid #ddd;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    flex: 1;
+    border: 1px solid #ddd;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  #japan {
+    width: 24px;
+    height: 16px;
+    border: 1px solid #ddd;
+  }
+
+  a {
+    display: flex;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    width: 2px;
+    height: 80%;
+    position: absolute;
+    right: -5px;
+    background-color: gray;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  a:last-of-type::after {
+    display: none;
+  }
+
+  .link {
+    gap: 0.5em;
+  }
+
+  .link-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  gap: 1em;
+
+  & img {
+    width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    margin-right: 1em;
+    object-fit: cover;
+  }
+}
+
+li {
+  list-style: none;
+  display: flex;
+
+  border-radius: 8px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    & p {
+      margin: 0;
+      color: #c8c4bc;
+    }
+  }
+}
+
+li:hover {
+  box-shadow: 0px 0px 10px 0px #ddd;
+  outline: 1px solid #ddd;
+}
+
+.audio-player {
+  position: sticky;
+  bottom: 0;
+}
+
+.custom-player {
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  padding: 0.2em 2em;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-title {
+  display: flex;
+  flex-direction: column;
+  span {
+    color: #c8c4bc;
+  }
+}
+
+.custom-controller {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.custom-player-btn {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+
+  button {
+    color: white;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.volume-controller {
+  position: relative;
+}
+
+#volume-btn {
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+#volume {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  transform: rotate(270deg);
+  top: -60px;
+  right: -210%;
+  width: 100px;
+  z-index: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #ffa4b3;
+  border-radius: 24px;
+  margin-top: -3px;
+}
+
+#volume::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #ddd;
+  border-radius: 10px;
+}
