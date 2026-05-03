@@ -1,0 +1,11 @@
+.carousel-container{
+    overflow: hidden;
+    height: 440px;
+}
+
+.section-title{
+    position: relative;
+    top: 30px;
+    padding-left: 20px;
+}
+
