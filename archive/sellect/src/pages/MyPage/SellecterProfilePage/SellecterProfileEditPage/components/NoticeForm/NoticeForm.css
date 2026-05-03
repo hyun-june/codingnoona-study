@@ -1,0 +1,42 @@
+.notice_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 2em;
+
+  h4 {
+    margin-bottom: 0.5em;
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid var(--line-color);
+    padding: 1em;
+    resize: none;
+    overflow: hidden;
+    min-height: 17em;
+  }
+
+  button {
+    position: absolute;
+    right: 1em;
+  }
+}
+
+.notice_preview {
+  white-space: pre-wrap;
+  border: 1px solid var(--line-color);
+  padding: 1em;
+  min-height: 17em;
+}
+
+
+@media screen and (max-width:430px){
+.notice_container {
+display: flex;
+flex-direction: column;
+}
+
+}

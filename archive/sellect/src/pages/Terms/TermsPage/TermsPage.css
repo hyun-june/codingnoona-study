@@ -1,0 +1,46 @@
+.terms_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  h4 {
+    color: var(--text-color-navy);
+    font-weight: bold;
+  }
+
+  p {
+    line-height: 1.2em;
+  }
+
+  ol {
+    counter-reset: item; /* 카운터 초기화 */
+    margin: 1em 0em;
+  }
+
+  li {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    margin-bottom: 1em;
+    line-height: 1.2em;
+    padding-left: 0.5em;
+  }
+
+  li::before {
+    content: "(" counter(item) ")";
+    margin-right: 5px;
+    counter-increment: item;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 1em; /* 셀 간 간격 */
+
+    th,
+    td {
+      padding-right: 3em;
+    }
+  }
+  span {
+    text-decoration: underline;
+    color: blue;
+  }
+}

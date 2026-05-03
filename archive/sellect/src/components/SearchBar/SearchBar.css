@@ -1,0 +1,28 @@
+.inputNav {
+  position: relative;
+}
+
+.inputNav input {
+  width: 100%;
+  height: 2em;
+  padding: 0em 1em 0em 2em;
+  border: none;
+}
+
+.inputNav input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.navIcon {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+}
+
+
+@media screen and (max-width:430px){
+.inputNav input::placeholder {
+ font-size: 0.875em;
+}
+}

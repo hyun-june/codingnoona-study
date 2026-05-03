@@ -1,0 +1,51 @@
+.business_info {
+  width: 25em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .custom-dropdown {
+    span {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+
+  .business_info_type {
+    .selected-section {
+      width: 15em;
+    }
+
+    .dropdown-list {
+      height: max-content;
+      overflow-y: hidden;
+    }
+  }
+
+  label {
+    width: 35%;
+  }
+}
+
+.business_type_section {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+
+  div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .business_info {
+    width: 100%;
+  }
+}

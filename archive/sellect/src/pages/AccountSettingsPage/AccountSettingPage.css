@@ -1,0 +1,214 @@
+.account_title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 1em;
+  margin-bottom: 1em;
+
+  h5 {
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.account_container {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 1em;
+
+  .custom_box {
+    margin-bottom: 1em;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: clamp(1em, 3vw, 1.5em);
+    background-color: white;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+.account_myInfo {
+  padding: 0em 3em;
+}
+
+.account_inner {
+  border: 1px solid var(--line-color);
+  position: relative;
+  padding: 1em;
+}
+
+.account_label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  align-items: center;
+  width: 60%;
+
+  label {
+    margin-bottom: 0.5em;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid var(--line-color);
+    margin-top: 0.3em;
+    padding: 0.3em 0.5em;
+  }
+}
+
+.account_btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  padding-top: 0.5em;
+
+  button {
+    background-color: var(--text-color-yellow);
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
+
+.account_push_setting {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+
+  div {
+    display: flex;
+  }
+
+  p {
+    margin: 0;
+    font-weight: bold;
+    font-size: clamp(1em, 3vw, 1.5em);
+    text-wrap: nowrap;
+  }
+
+  label {
+    margin-left: clamp(0.5em, 3vw, 2em);
+    cursor: pointer;
+    font-size: clamp(0.875em, 3vw, 1.2em);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-left: 0.3em;
+    }
+  }
+}
+
+.setting_tab_2 {
+  padding: 1em;
+
+  .reason_check_input {
+    margin-right: 1em;
+    width: 10px;
+    height: 18px;
+    border: none;
+    border-bottom: 3px solid var(--line-color);
+    border-right: 3px solid var(--line-color);
+    transform: rotate(45deg);
+  }
+
+  label {
+    cursor: pointer;
+    width: max-content;
+  }
+
+  .reason_check_input:checked {
+    border-bottom: 3px solid var(--text-color-yellow);
+    border-right: 3px solid var(--text-color-yellow);
+    background-color: white;
+  }
+
+  .tab2_reason_section {
+    padding-bottom: 2em;
+    border-bottom: 3px solid var(--line-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    h5 {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+  }
+  .reason_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+  }
+
+  ul {
+    list-style: "- ";
+    padding: 0;
+    margin-top: 1em;
+    line-height: 1.5em;
+    font-weight: bold;
+    color: blue;
+  }
+
+  .tab2_btn {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      border-radius: 5px;
+      background-color: var(--text-color-yellow);
+      padding: 0.5em 2em;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .account_title {
+    display: flex;
+    > span:first-of-type {
+      display: none;
+    }
+  }
+
+  .account_container {
+    display: flex;
+    flex-direction: column;
+
+    > div:first-of-type {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .custom_box {
+      margin: 0;
+      width: 30%;
+      height: 40px;
+    }
+  }
+
+  .account_label {
+    width: 100%;
+  }
+
+  .account_inner {
+    padding: 0.5em;
+  }
+
+  .account_push_setting {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+  }
+}

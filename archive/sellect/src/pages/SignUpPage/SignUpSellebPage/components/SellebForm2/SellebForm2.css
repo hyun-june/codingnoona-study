@@ -1,0 +1,148 @@
+.info-form {
+  > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.info-left {
+  border-right: 1px dashed black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    color: var(--text-color);
+    padding-left: 0.5em;
+    line-height: 1.3em;
+    margin-bottom: 0.5em;
+  }
+
+  span {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.info-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+.info-second-title {
+  margin-top: 5.7em;
+}
+
+.info-display {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.visa-info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-right {
+  width: 25em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.visa-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line-color);
+  align-items: center;
+  height: 2.5em;
+  color: var(--text-color-gray);
+  font-weight: bold;
+  padding-left: 0.5em;
+  margin-bottom: 1.2em;
+}
+
+.visa-check {
+  display: flex;
+  width: 8em;
+  justify-content: space-around;
+
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    width: 13px;
+    height: 13px;
+    border: 2px solid var(--text-color);
+    cursor: pointer;
+    margin-left: 0.3em;
+  }
+}
+
+.visa-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+
+  label {
+    width: 40%;
+  }
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+
+  label {
+    width: 40%;
+  }
+}
+
+.bankbook-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+
+  label {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+}
+
+@media screen and (max-width: 500px) {
+  .info-form {
+    > div:first-child {
+      flex-direction: column;
+    }
+  }
+
+  .info-left {
+    border: none;
+    width: 100%;
+  }
+
+  .info-right {
+    width: 100%;
+  }
+
+  .info-second-title {
+    margin-top: 2em;
+  }
+}

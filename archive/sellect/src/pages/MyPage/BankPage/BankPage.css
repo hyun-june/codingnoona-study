@@ -1,0 +1,260 @@
+.bankPage_container {
+  text-align: left;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .bankPage_Info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+
+    p {
+      margin: 0;
+      font-size: clamp(1em, 5vw, 1.2em);
+    }
+
+    .bankPage_Info_Inner {
+      /* display: flex;
+      flex-direction: column; */
+      background-color: #edf5fb;
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+
+      .bankPage_Info_title {
+        border-bottom: 5px solid var(--line-color-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+        p {
+          font-weight: bold;
+          font-size: clamp(1.2em, 5vw, 1.5em);
+        }
+
+        input {
+          background-color: white;
+          border-radius: 5px;
+          margin-right: 1em;
+          text-align: right;
+          font-size: clamp(1.2em, 5vw, 1.5em);
+          font-weight: bold;
+        }
+
+        button {
+          border: 1px solid var(--line-color);
+          padding: 0.5em;
+          border-radius: 5px;
+        }
+
+        button:hover {
+          background-color: var(--line-color-blue);
+          border: 1px solid var(--line-color-blue);
+        }
+
+        input::placeholder {
+          text-align: center;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      .bankPage_Info_desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+      .bankPage_Info_Inner__Details {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        > p:first-child {
+          margin-bottom: 1em;
+        }
+
+        .bankPage_Info_Inner_pay {
+          display: flex;
+          gap: 2em;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3em;
+          }
+        }
+      }
+    }
+  }
+
+  .bankPage_content_box {
+    background-color: #edf5fb;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+
+    .content_box_memo_inner {
+      background-color: white;
+    }
+
+    .content_memo_form {
+      width: fit-content;
+
+      > div:last-of-type {
+        border-top: 1px solid var(--line-color);
+        padding-top: 1em;
+      }
+    }
+
+    .content_memo {
+      display: flex;
+      margin-bottom: 1em;
+      width: 100%;
+    }
+  }
+}
+
+.bankPage_sellecter {
+  position: relative;
+  padding-left: 1em;
+
+  input {
+    position: absolute;
+    top: 2em;
+    transform: translateY(-50%);
+    left: -0.5em;
+  }
+}
+
+.bankPage_cancel_section {
+  /* border-top: 4px solid var(--line-color);
+  border-bottom: 4px solid var(--line-color);
+  padding: 1em;
+  position: relative; */
+
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--line-color);
+  border-bottom: 4px solid var(--line-color);
+  gap: 2em;
+  padding-top: 2em;
+
+  input[type="radio"] {
+    border: 3px solid var(--text-color);
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+
+  .bankPage_cancel_inner {
+    display: flex;
+    gap: 2em;
+    font-weight: bold;
+    font-size: clamp(1em, 3vw, 1.2em);
+
+    input {
+      margin-left: 0.5em;
+    }
+
+    label {
+      color: var(--text-color-gray);
+      font-size: clamp(14px, 3vw, 16px);
+    }
+  }
+
+  .cancel_inner_title {
+    width: 8em;
+    text-align: right;
+    margin-right: 2em;
+  }
+
+  .cancel_user {
+    color: var(--warn-color);
+  }
+
+  button {
+    align-self: flex-end;
+    margin-top: auto;
+    background-color: var(--line-color-blue);
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bankPage_container {
+    .bankPage_Info {
+      display: flex;
+      flex-direction: column;
+
+      .bankPage_Info_Inner {
+        .bankPage_Info_title {
+          padding: 0.5em 0;
+        }
+      }
+    }
+
+    .bankPage_content_box {
+      .content_box_memo_inner {
+        button {
+          right: 0.5em;
+          bottom: 0.5em;
+          padding: 0.2em;
+        }
+      }
+
+      .content_box_memo_inner.open {
+        padding: 1em;
+      }
+      .content_memo_form {
+        width: fit-content;
+
+        > div:last-of-type {
+          border-top: 1px solid var(--line-color);
+          padding-top: 0.5em;
+        }
+      }
+
+      .content_memo {
+        display: flex;
+        margin-bottom: 1em;
+        width: 100%;
+      }
+    }
+  }
+
+  .bankPage_cancel_section {
+    .bankPage_cancel_inner {
+      gap: 0.5em;
+      width: 100%;
+
+      input {
+        margin-left: 0.2em;
+      }
+    }
+
+    .cancel_user {
+      font-size: 14px;
+      text-wrap: wrap;
+      max-width: 140px;
+    }
+
+    .cancel_inner_title {
+      text-wrap: nowrap;
+      width: max-content;
+      margin-right: 0em;
+    }
+  }
+}

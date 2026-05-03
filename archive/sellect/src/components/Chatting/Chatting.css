@@ -1,0 +1,142 @@
+.chatting_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .start_message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+
+    span {
+      padding-bottom: 0.2em;
+      border-bottom: 1px solid var(--line-color);
+      width: max-content;
+    }
+  }
+}
+
+.message_section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-height: 750px;
+  overflow: auto;
+  padding: 1em;
+
+  .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .message {
+    padding: 0px 8px;
+    border-radius: 12px;
+    max-width: 80%;
+    margin: 2px 8px;
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+  }
+
+  .message-content {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 100%;
+    padding-top: 5px;
+    line-height: 1.2em;
+  }
+}
+
+.message.user {
+  background-color: rgb(189, 181, 211);
+}
+
+.message.other {
+  background-color: white;
+}
+
+.message_box {
+  display: flex;
+  max-width: 50%;
+}
+.message_box.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message_box.other {
+  align-self: flex-start;
+}
+
+.send_message {
+  padding: 0em 1em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+  textarea {
+    resize: none;
+    border: 2px solid var(--line-color-blue);
+    background-color: white;
+    width: 100%;
+    height: 2em;
+    padding-top: 0.1em;
+    border-radius: 8px;
+    padding-left: 2em;
+    font-size: 1.2em;
+    line-height: 1.7em;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    left: 1.5em;
+    cursor: pointer;
+    display: block;
+  }
+
+  button {
+    background-color: inherit;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}
+
+/* 채팅 스크롤바 */
+.message_section::-webkit-scrollbar {
+  width: 5px;
+}
+
+.message_section::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+}
+
+.message_section::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+@media screen and (max-width:430px){
+.message_section {
+  max-height: 300px;
+}
+}
+
+
+

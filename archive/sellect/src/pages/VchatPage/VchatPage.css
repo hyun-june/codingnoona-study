@@ -1,0 +1,234 @@
+.vchat_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.vchat_header {
+  text-align: center;
+  margin-bottom: 1em;
+
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--text-color-yellow);
+    padding: 1em;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+
+  .timeout {
+    color: var(--warn-color);
+  }
+}
+
+.vchat_video_section {
+  display: grid;
+  grid-template-columns: 1fr 5px 1fr;
+  gap: 1em;
+  height: 100%;
+  background-color: white;
+
+  .chat_vertical_line {
+    justify-self: center;
+    width: 3px;
+    height: 100%;
+    background-color: var(--line-color);
+  }
+
+  .vchat_video_inner {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr;
+
+    video {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      background-color: black;
+      transform: scaleX(-1);
+    }
+
+    img {
+      width: 100%;
+      max-height: 350px;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 0.2em;
+    }
+
+    .vchat_video_button {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+      padding: 0.2em 0.5em;
+      align-items: center;
+      background-color: var(--line-color);
+
+      span {
+        font-weight: bold;
+      }
+
+      div {
+        display: flex;
+        gap: 0.5em;
+      }
+
+      .video_button_item {
+        position: relative;
+
+        button {
+          font-size: 2em;
+          padding: 0em 0.2em;
+          transition: background-color 0.3s;
+          background-color: none;
+          border-radius: 8px;
+        }
+
+        button:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .btn_guide {
+          position: absolute;
+          top: -90%;
+          width: max-content;
+          right: -30%;
+          font-size: 0.8em;
+          background-color: var(--line-color);
+          color: white;
+          font-weight: normal;
+          margin: 0;
+          padding: 0.3em;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: 999;
+          border-radius: 4px;
+        }
+
+        .btn_guide::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 40%;
+          width: 0;
+          height: 0;
+          border: solid transparent;
+          border-color: none;
+          border-top-color: var(--line-color);
+          border-width: 8px;
+          pointer-events: none;
+        }
+
+        button:hover + .btn_guide {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.vchat_chatting_section {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  flex: 1;
+  gap: 1em;
+  margin-top: 1em;
+  border-top: 3px solid var(--line-color);
+
+  .vchat_chatting {
+    border-right: 3px solid var(--line-color);
+    overflow: auto;
+    height: 330px;
+
+    textarea {
+      padding-left: 1em;
+    }
+  }
+
+  .vchat_btn_section {
+    padding: 1em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .vchat_alarm_box {
+      border: 3px solid var(--text-color-yellow);
+      background-color: var(--text-color-yellow);
+      padding: 0.3em 0.5em;
+      margin-left: 0.5em;
+      text-align: center;
+      align-items: center;
+      color: white;
+      border-radius: 6px;
+      min-height: 2.5em;
+      line-height: 1.5em;
+    }
+
+    .vchat_menu_btn {
+      border: 3px solid var(--text-color-yellow);
+      color: var(--text-color-yellow);
+    }
+
+    .vchat_menu_btn:hover {
+      background-color: var(--text-color-yellow);
+      color: white;
+    }
+
+    .vchat_menu_btn:last-child {
+      margin-top: auto;
+    }
+  }
+}
+
+.vchat_chatting::-webkit-scrollbar {
+  width: 5px;
+}
+
+.vchat_chatting::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+}
+
+.vchat_chatting::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+
+@media screen and (max-width:430px){
+
+  .vchat_header {
+  span {
+    padding: 0.5em;
+  }
+
+  .timeout {
+    color: var(--warn-color);
+  }
+}
+
+
+.vchat_video_section{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.vchat_chatting_section {
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  .vchat_chatting {
+    border: none;
+  }
+}
+}

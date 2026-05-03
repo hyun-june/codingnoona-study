@@ -1,0 +1,124 @@
+.ticket_container {
+  width: 100%;
+  flex: 1;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  > div:first-of-type {
+    font-weight: bold;
+  }
+
+  .ticket_inner {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 2em;
+    margin-top: 1em;
+    height: 100%;
+    font-weight: bold;
+
+    .ticket_list {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      .custom_box {
+        cursor: pointer;
+
+        span {
+          pointer-events: none;
+        }
+      }
+    }
+
+    .ticket_item {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0em 2em;
+      box-sizing: border-box;
+    }
+
+    .ticket_cart {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      height: 100%;
+
+      .custom_box {
+        border: 2px solid var(--line-color-blue);
+        height: 70px;
+      }
+    }
+
+    .buy_ticket {
+      flex-grow: 1;
+      padding: 2em;
+      position: relative;
+
+      p{
+        margin-bottom: 0.5em;
+      }
+
+      button {
+        background-color: var(--line-color-blue);
+        opacity: 0.8;
+        border: none;
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+      }
+
+      button:hover {
+        background-color: var(--line-color-blue);
+        opacity: 1;
+        color: black;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        background-color: var(--line-color);
+        opacity: 1;
+        color: var(--text-color-gray);
+      }
+      button:disabled:hover {
+        background-color: var(--line-color);
+        opacity: 1;
+      }
+    }
+  }
+
+  .ticket_font {
+    font-size: 1.8em;
+  }
+
+  .ticket_select {
+    border: 2px solid black;
+  }
+}
+
+
+@media screen and (max-width:430px){
+.ticket_container{
+  .ticket_inner {
+    display: flex;
+    flex-direction: column;
+
+   .buy_ticket {
+      padding: 1em;
+
+      p{
+        margin-bottom: 0;
+      }
+
+    }
+
+    .ticket_font {
+    font-size: 1.5em;
+  }
+  }
+}
+}

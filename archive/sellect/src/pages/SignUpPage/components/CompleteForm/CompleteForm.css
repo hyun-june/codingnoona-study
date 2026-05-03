@@ -1,0 +1,25 @@
+.complete-section {
+  text-align: center;
+  letter-spacing: 1px;
+
+  h3 {
+    color: var(--text-color);
+    margin-bottom: 1em;
+  }
+
+  p {
+    color: var(--text-color);
+    margin-bottom: 2em;
+  }
+}
+
+.mypage_link {
+  color: var(--text-color-yellow);
+  font-weight: bold;
+}
+
+.point-text {
+  color: var(--text-color-blue);
+  font-weight: bold;
+  letter-spacing: 2px;
+}

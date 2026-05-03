@@ -1,0 +1,195 @@
+.schedule_container {
+  text-align: left;
+  width: 100%;
+
+  .react-calendar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    border: none;
+  }
+
+  .sunday {
+    color: red;
+  }
+
+  .not_sunday {
+    color: var(--text-color);
+  }
+
+  /* 년월 스타일 */
+  .react-calendar__navigation {
+    justify-content: center;
+    margin-top: 1em;
+    align-items: center;
+  }
+
+  /* 년월 라벨 스타일 */
+  .react-calendar__navigation__label {
+    font-size: clamp(2em, 3vw, 3em);
+    flex-grow: 0 !important;
+    margin: 0em 1em;
+  }
+
+  .react-calendar__navigation__label:hover {
+    background-color: white !important;
+  }
+
+  /* 네비게이션 버튼 스타일 */
+  .react-calendar__navigation__arrow.react-calendar__navigation__prev-button,
+  .react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+    font-weight: bold;
+    font-size: clamp(2em, 3vw, 3em);
+    position: relative;
+    height: 100%;
+    top: -5px;
+    color: var(--line-color);
+  }
+
+  .react-calendar__navigation__arrow:hover {
+    background-color: white !important;
+    color: var(--text-color);
+  }
+
+  /* 요일 라벨 스타일 */
+  .react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* 달력 타일 */
+  .react-calendar__tile {
+    width: 100px;
+    height: 150px;
+    overflow: visible !important;
+  }
+
+  /* 날짜의 글자 스타일 */
+  .react-calendar__month-view__days__day-names,
+  .react-calendar__month-view__days__day {
+    font-size: 1.5em;
+    position: relative;
+
+    abbr {
+      position: absolute;
+      left: 0.1em;
+      top: 0.2em;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      font-size: clamp(14px, 3vw, 24px);
+    }
+  }
+
+  /* 날짜 셀 */
+  .react-calendar__month-view__days__day {
+    border: 1px solid var(--line-color) !important;
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    font-size: clamp(1.5em, 3vw, 2em);
+    background-color: #003768;
+    border-right: 1px solid var(--line-color);
+  }
+
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: rgba(92, 92, 92, 0.5);
+  }
+}
+
+/* 메모 */
+.calendar_memo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #81b3e4;
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+  margin-top: 2em;
+
+  div {
+    margin-bottom: 0.3em;
+  }
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal_content {
+  background: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  h3 {
+    margin-bottom: 1em;
+  }
+
+  input {
+    border-bottom: 1px solid var(--line-color);
+    margin: 0.5em 0em;
+    width: 100%;
+  }
+
+  .memo_item {
+    margin-bottom: 0.5em;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      text-align: left;
+    }
+
+    button {
+      flex-shrink: 0;
+    }
+  }
+
+  .modal_btn_section {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+    button {
+      margin-top: 1em;
+      background: #eee;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .schedule_container {
+    /* 달력 타일 */
+    .react-calendar__tile {
+      height: 80px;
+      overflow-y: scroll !important;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.preview {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  input {
+    display: none;
+  }
+}
+
+.previews_ImgSection {
+  display: flex;
+
+  gap: 1em;
+
+  div {
+    position: relative;
+  }
+
+  img {
+    width: 10em;
+    height: 10em;
+    border: 1px solid var(--text-color-gray);
+    object-fit: cover;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: inherit;
+  }
+}
+
+.previews_section {
+  display: flex;
+  padding: 1em 0em;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+}
+
+.previewBox {
+  border: 1px solid var(--text-color-gray);
+  width: 23em;
+  height: 30.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-gray);
+  font-weight: bold;
+
+  img {
+    width: 22.5em;
+    height: 30em;
+    object-fit: cover;
+  }
+}
+
+.empty-slot {
+  /* width: 10em;
+  height: 10em; */ /* 지우기 고민*/
+  border: 1px solid var(--text-color-gray);
+  object-fit: cover;
+}
+
+.btn_section {
+  label {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    border: 2px solid var(--line-color);
+    background-color: white;
+    margin: 0.5em;
+    transition: 0.3s;
+    border-radius: 6px;
+    min-height: 2.5em;
+    padding: 0.3em 0.5em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  label:hover {
+    border: 2px solid var(--text-color);
+    background-color: var(--text-color);
+    color: var(--text-color-white);
+  }
+
+  .custom_button  {
+    position: absolute;
+    right: 0;
+    top: 3em;
+    margin: 0.5em;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width:430px){
+
+.preview {
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.previews_section {
+  padding: 0;
+}
+
+.previewBox {
+  width: 100%;
+}
+
+.previews_ImgSection {
+  display: flex;
+  flex-wrap: wrap;
+  position: static;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.btn_section {
+  display: flex;
+  justify-content: flex-end;
+
+  label {
+    position: static;
+    width: max-content;
+  }
+  .custom_button  {
+    position: static;
+  }
+
+}
+
+
+}

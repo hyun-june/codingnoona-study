@@ -1,0 +1,243 @@
+/* 에스코어드림 폰트 */
+@import "./reset.css";
+
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 나눔스퀘어 */
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+
+body {
+  /* font-family: "S-CoreDream-3Light" !important; */
+  font-family: "Pretendard-Regular", sans-serif !important;
+}
+
+/* 사용한 색상 */
+
+:root {
+  /* --text-color: #333333;
+  --text-color-gray: #5c5c5c;
+  --text-color-white: #f5f5f5;
+  --text-color-yellow: #ffc30b;
+  --line-color: #c1c1be;
+  --warn-color: #991b1b; */
+  --text-color: #121212;
+  --text-color-white: #ffffff;
+  --text-color-gray: #5c5c5c;
+  --text-color-blue: #46b0e0;
+  --text-color-navy: #003768;
+  --line-color: #c1c1be;
+  --line-color-blue: #a6c9eb;
+  --text-color-yellow: #ffc30b;
+  --background-blue: #e9f3fb;
+  --warn-color: #991b1b;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-size: clamp(1.5em, 5vw, 2em);
+}
+
+h5 {
+  color: var(--text-color);
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+
+button {
+  cursor: pointer;
+}
+
+.icon-size-2 {
+  font-size: 2em;
+}
+
+.prev_next_btn {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 3em; */
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  border: 2px solid var(--text-color);
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+/* input[type="checkbox"]:checked {
+  background-color: var(--text-color);
+} */
+
+input:checked {
+  background-color: var(--text-color);
+}
+
+.background_logo {
+  z-index: 1;
+  opacity: 0.08;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.warning_text {
+  color: var(--warn-color);
+  font-size: 0.875em;
+}
+
+/* Custom_tabs */
+
+.tabs_content {
+  img {
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
+}
+
+.career {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  li {
+    list-style-type: "-";
+    padding-left: 0.5em;
+  }
+}
+
+/* react-tabs */
+
+.tabs_list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.tab_item {
+  border: 2px solid var(--line-color);
+  color: var(--text-color);
+  font-weight: bold;
+  width: 150px;
+  height: 60px;
+  margin: 0rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.tab_item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.visited {
+  background-color: #333333;
+  color: white;
+  border: none;
+  transition: 0.6s;
+}
+
+.react-tabs__tab--selected {
+  border: 2px solid black;
+}
+
+.tabs-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.5em;
+}
+
+/* react-calendar */
+.sunday {
+  color: red;
+}
+
+.not_sunday {
+  color: var(--text-color);
+}
+
+/* month에서 오늘 날짜 스타일 */
+.react-calendar__month-view .react-calendar__tile--now abbr {
+  background-color: var(--line-color) !important;
+}
+
+/* 선택된 날짜 */
+.react-calendar__tile--active {
+  background-color: white !important;
+
+  abbr {
+    background-color: var(--text-color-yellow);
+  }
+}
+
+.react-calendar__tile:hover {
+  background-color: white !important;
+}
+
+/* 오늘 날짜 스타일 */
+.react-calendar__tile--now {
+  background-color: white;
+}
+
+/* LoginLink */
+.LoginLink {
+  color: var(--text-color);
+  font-weight: 900;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-wrap: nowrap;
+}
+
+.login_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+/* 미디어쿼리 */
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .tabs_list {
+    width: 100%;
+  }
+
+  .tab_item {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tabs_list {
+    display: none;
+  }
+
+  .react-tabs {
+    width: 100%;
+  }
+}
