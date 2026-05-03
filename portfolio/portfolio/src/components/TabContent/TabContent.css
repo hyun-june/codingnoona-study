@@ -1,0 +1,13 @@
+.content_section {
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+
+  & h2 {
+    margin-bottom: 1em;
+  }
+}
+
+.content_category {
+  color: var(--color-pink);
+}

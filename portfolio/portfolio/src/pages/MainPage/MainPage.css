@@ -1,0 +1,84 @@
+.main_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  height: 100%;
+
+  & img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.main_imgbox {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.main_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 1.2px;
+  opacity: 0;
+  gap: 2em;
+  animation: fadeIn 2s forwards;
+
+  & h1 {
+    font-size: 4em;
+  }
+
+  & span:first-of-type {
+    border: 2px solid var(--color-pink);
+    width: 100px;
+  }
+}
+
+.sub_title {
+  display: flex;
+  font-size: 2em;
+  position: relative;
+
+  & p {
+    color: var(--color-pink);
+  }
+}
+
+.text_item {
+  opacity: 0;
+  transition: 1s;
+  transform-origin: 50% 100%;
+  font-weight: bold;
+  position: absolute;
+  left: 4.3em;
+}
+
+.visible {
+  opacity: 1;
+  transform: rotateX(0deg);
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: rotateX(-180deg);
+}
+
+.icons_box {
+  display: flex;
+  gap: 1em;
+}
+
+.git_icon {
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.git_icon:hover {
+  color: var(--color-pink);
+  transform: scale(1.2);
+}

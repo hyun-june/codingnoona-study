@@ -1,0 +1,26 @@
+.content_inner {
+  display: flex;
+  margin-bottom: 1em;
+
+  & img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+}
+
+.inner_text {
+  padding: 1em;
+
+  & h4 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+  }
+
+  & p {
+    padding-left: 0.5em;
+    font-weight: bold;
+    color: var(--color-ivory);
+  }
+}

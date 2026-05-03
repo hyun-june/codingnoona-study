@@ -1,0 +1,16 @@
+.subTitle {
+  position: relative;
+  margin-bottom: 1em;
+  font-size: 2em;
+  letter-spacing: 3px;
+}
+
+.subTitle::after {
+  content: "";
+  width: 10em;
+  height: 2px;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 15px;
+  margin-left: 0.6em;
+}
